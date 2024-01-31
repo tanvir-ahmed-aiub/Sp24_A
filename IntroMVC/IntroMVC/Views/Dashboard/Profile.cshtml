@@ -1,0 +1,29 @@
+﻿<h2>Profile</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Cgpa</th>
+    </tr>
+    @*<tr>
+        <td>@ViewBag.Name</td>
+        <td>@ViewBag.Id</td>
+        <td>@ViewBag.Cgpa</td>
+    </tr>*@
+    @*@for (int i = 0; i < ViewBag.Students.Length; i++) { 
+        <tr>
+            <td>@ViewBag.Students[i].Name</td>
+            <td>@ViewBag.Students[i].Id</td>
+            <td>@ViewBag.Students[i].Cgpa</td>
+        </tr>
+    }*@
+
+    @foreach (var i in ViewBag.Students) { 
+        <tr>
+            <td>@i.Name</td>
+            <td>@i.Id</td>
+            <td>@i.Cgpa</td>
+        </tr>
+    }
+</table>
+
