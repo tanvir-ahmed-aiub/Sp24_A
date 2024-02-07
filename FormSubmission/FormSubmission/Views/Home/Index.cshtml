@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<p class="text-danger">
+    @Html.ValidationSummary()
+</p>
+
+<h2>Create Student</h2>
+<form method="post" action="">
+    <input type="text" value="@Model.Name" placeholder="Name" class="form-control" name="Name" />
+    <br />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+    <input type="text" value="@Model.Username" placeholder="Username" class="form-control" name="Username" />
+    <br />
+    <span class="text-danger">@Html.ValidationMessage("Username")</span>
+    Gender: <input type="radio" value="Male" name="Gender" /> Male <input name="Gender" value="Female" type="radio" />Female
+    <input type="text" name="Email" placeholder="Email" class="form-control " />
+    Profession: <select name="Profession" class="form-control">
+        <option selected disabled>--Select--</option>
+        <option value="1">Business</option>
+        <option value="2">Student</option>
+    </select>
+    Hobbies: <input type="checkbox" value="Movies" name="Hobbies[]" />Movies
+    <input type="checkbox" value="Sports" name="Hobbies[]" />Sports
+    <input type="checkbox" value="Travelling" name="Hobbies[]" />Travelling
+    <br />
+    <input type="number" name="Roll" placeholder="Roll" class="form-control" />
+    <input type="submit" value="SignUp" class="btn btn-danger" />
+</form>
+
