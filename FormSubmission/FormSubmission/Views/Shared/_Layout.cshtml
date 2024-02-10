@@ -20,6 +20,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li><a href="/">My Login URL</a></li>
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
@@ -28,6 +29,7 @@
         </div>
     </div>
     <div class="container body-content">
+        <h1>@ViewBag.Layout</h1>
         @RenderBody()
         <hr />
         <footer>

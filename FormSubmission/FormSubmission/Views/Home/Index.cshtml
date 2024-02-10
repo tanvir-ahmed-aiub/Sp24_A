@@ -1,8 +1,30 @@
 ﻿
-@{
-    ViewBag.Title = "Index";
-}
+@{ 
+    bool CheckGender(string gender) {
+        if (Model == null || Model.Gender == null) return false;
+        if (Model.Gender.Equals(gender)) return true;
+        return false;
+    }
 
+    bool CheckProfession(string prof) {
+        if (Model == null || Model.Profession == null) return false;
+        if (Model.Profession.Equals(prof)) return true;
+        return false;
+    }
+    bool CheckHobbies(string hb) {
+        if (Model == null || Model.Hobbies == null) return false;
+        foreach (var h in Model.Hobbies) {
+            if(h.Equals(hb))
+            {
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+
+}
 <p class="text-danger">
     @Html.ValidationSummary()
 </p>
@@ -15,18 +37,18 @@
     <input type="text" value="@Model.Username" placeholder="Username" class="form-control" name="Username" />
     <br />
     <span class="text-danger">@Html.ValidationMessage("Username")</span>
-    Gender: <input type="radio" value="Male" name="Gender" /> Male <input name="Gender" value="Female" type="radio" />Female
+    Gender: <input type="radio" checked="@CheckGender("Male")"  value="Male" name="Gender" /> Male <input name="Gender" checked="@CheckGender("Female")" value="Female" type="radio" />Female
     <input type="text" name="Email" placeholder="Email" class="form-control " />
     Profession: <select name="Profession" class="form-control">
         <option selected disabled>--Select--</option>
-        <option value="1">Business</option>
-        <option value="2">Student</option>
+        <option selected="@CheckProfession("1")" value="1">Business</option>
+        <option selected="@CheckProfession("2")" value="2">Student</option>
     </select>
-    Hobbies: <input type="checkbox" value="Movies" name="Hobbies[]" />Movies
-    <input type="checkbox" value="Sports" name="Hobbies[]" />Sports
-    <input type="checkbox" value="Travelling" name="Hobbies[]" />Travelling
+    Hobbies: <input type="checkbox" checked="@CheckHobbies("Movies")" value="Movies" name="Hobbies[]" />Movies
+    <input type="checkbox" value="Sports" checked="@CheckHobbies("Sports")" name="Hobbies[]" />Sports
+    <input type="checkbox" value="Travelling" checked="@CheckHobbies("Travelling")" name="Hobbies[]" />Travelling
     <br />
-    <input type="number" name="Roll" placeholder="Roll" class="form-control" />
+    <input type="number" value="@Model.Roll" name="Roll" placeholder="Roll" class="form-control" />
     <input type="submit" value="SignUp" class="btn btn-danger" />
 </form>
 

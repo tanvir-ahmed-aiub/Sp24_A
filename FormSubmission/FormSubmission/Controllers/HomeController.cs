@@ -14,12 +14,14 @@ namespace FormSubmission.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            ViewBag.Layout = "This is for Layout from Action";
             return View(new Person());
         }
         [HttpPost]
         public ActionResult Index(Person p)
         {
             if (ModelState.IsValid) { //checking the rules imposed in Person class
+                TempData["Msg"] = "Form is valid";
                 return RedirectToAction("Contact");
             }
             return View(p);
