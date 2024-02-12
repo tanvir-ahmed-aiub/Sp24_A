@@ -9,7 +9,7 @@ namespace FormSubmission.Models
     public class Person
     {
         [Required]
-        [StringLength(7,ErrorMessage ="My Error")]
+        [StringLength(50,ErrorMessage ="My Error")]
         public string Name { get; set; }
         [Required]
         [StringLength(5,MinimumLength =2)]
