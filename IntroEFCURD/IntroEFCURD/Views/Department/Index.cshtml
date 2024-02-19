@@ -1,0 +1,23 @@
+﻿@model List<IntroEFCURD.EF.Department>
+
+
+<h2>Index</h2>
+<a href="/Department/Create">Create New</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var d in Model) { 
+        <tr>
+            <td>@d.Name</td>
+            <td>@d.Id</td>
+            <td>
+                <a href="/Department/Details/@d.Id" class="btn btn-success">Details</a>
+                <a href="/Department/Edit/@d.Id"  class="btn btn-default">Edit</a>
+                <a href=""  class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

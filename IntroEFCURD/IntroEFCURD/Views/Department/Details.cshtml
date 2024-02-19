@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<h3>@Model.Name</h3>
+<ol>
+    @foreach (var c in Model.Courses) { 
+    <li>@c.Name</li>
+    }
+</ol>

@@ -16,6 +16,7 @@ namespace Utility
         }
         static void Main(string[] args)
         {
+           
             int[] nums = { 45, 65, 76, 89, 78, 98, 87, 86, 92 };
 
             //SQl query general Syntax: select data from table_name where condition
