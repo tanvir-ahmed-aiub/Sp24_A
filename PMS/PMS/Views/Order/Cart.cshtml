@@ -20,13 +20,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Price)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CId)
-        </th>
-        <th></th>
+       
+     
     </tr>
-
+    @{ double total = 0;}
 @foreach (var item in Model) {
+    total += item.Qty * item.Price;
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
@@ -37,15 +36,18 @@
         <td>
             @Html.DisplayFor(modelItem => item.Price)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
+        
     </tr>
 }
+    <tr>
+        <td></td>
+        <th>Total</th>
+        <th>@total</th>
+    </tr>
 
 </table>
+<form method="post" action="/order/place">
+    <input  type="hidden" value="@total" name="Total" />
+    <input type="submit" value="Place Order" class="btn btn-danger" />
+
+</form>

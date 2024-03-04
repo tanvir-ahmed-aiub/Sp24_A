@@ -30,7 +30,5 @@ namespace PMS.EF
         public virtual DbSet<ProductOrder> ProductOrders { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<User> Users { get; set; }
-
-        public System.Data.Entity.DbSet<PMS.DTOs.CategoryDTO> CategoryDTOes { get; set; }
     }
 }

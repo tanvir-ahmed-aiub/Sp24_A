@@ -45,6 +45,9 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="Sp24_a_PMSModel.User">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>

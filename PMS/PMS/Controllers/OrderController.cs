@@ -1,4 +1,5 @@
-﻿using PMS.DTOs;
+﻿using PMS.Auth;
+using PMS.DTOs;
 using PMS.EF;
 using System;
 using System.Collections.Generic;
@@ -8,10 +9,12 @@ using System.Web.Mvc;
 
 namespace PMS.Controllers
 {
+    [Logged]
     public class OrderController : Controller
     {
         Sp24_a_PMSEntities db = new Sp24_a_PMSEntities();
         // GET: Order
+     
         public ActionResult Index()
         {
             var data = db.Products.ToList();
@@ -44,6 +47,29 @@ namespace PMS.Controllers
             var products = (List<ProductDTO>)Session["cart"];
             return View(products);
         }
-
+        [HttpPost]
+        public ActionResult Place(double Total) {
+            var order = new Order();
+            order.Total = Total;
+            order.Status = "Ordered";
+            order.UserId = ((User)Session["user"]).Id;
+            order.Date = DateTime.Now;
+            db.Orders.Add(order);
+            db.SaveChanges();
+            var cart = (List<ProductDTO>)Session["cart"];
+            foreach (var item in cart) {
+                var pd = new ProductOrder();
+                pd.Price = item.Price;
+                pd.Qty = item.Qty;
+                pd.OId = order.Id;
+                pd.PId = item.Id;
+                db.ProductOrders.Add(pd);
+            }
+            db.SaveChanges();
+            TempData["Msg"] = "Order Placed with id "+order.Id;
+            Session["cart"] = null;
+            return RedirectToAction("Index");
+            
+        }
     }
 }

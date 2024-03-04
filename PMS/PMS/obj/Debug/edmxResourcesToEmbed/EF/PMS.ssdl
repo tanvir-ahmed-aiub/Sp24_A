@@ -43,6 +43,9 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Uname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pass" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <Association Name="FK_Orders_Users">
     <End Role="Users" Type="Self.Users" Multiplicity="1" />
