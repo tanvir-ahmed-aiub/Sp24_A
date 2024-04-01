@@ -65,3 +65,13 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\obj\Debug\APIIntro.csproj
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\obj\Debug\APIIntro.csproj.CopyComplete
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\obj\Debug\APIIntro.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\obj\Debug\APIIntro.pdb
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\bin\EntityFramework.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\bin\EntityFramework.SqlServer.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\bin\EntityFramework.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\bin\EntityFramework.SqlServer.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\obj\Debug\APIIntro.Migrations.InitDBWithPerson.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\obj\Debug\APIIntro.csproj.GenerateResource.cache
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\obj\Debug\APIIntro.Migrations.CourseandDeptAdded.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\obj\Debug\APIIntro.Migrations.UserTableAdded.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\obj\Debug\APIIntro.Migrations.UserTableAdded2.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\APIIntro\APIIntro\obj\Debug\APIIntro.Migrations.PKFKDeptCourse.resources
