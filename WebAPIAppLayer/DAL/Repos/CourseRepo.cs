@@ -1,4 +1,5 @@
-﻿using DAL.EF.Entities;
+﻿using DAL.EF;
+using DAL.EF.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,22 +10,31 @@ namespace DAL.Repos
 {
     public class CourseRepo
     {
+        UMSContext db = new UMSContext();
         public void Create(Course c) {
-            //it will store data in c to  database
+            db.Courses.Add(c);
+            db.SaveChanges();
         }
         public Course Get(int id)
         {
-            return null;
+            return db.Courses.Find(id);
+            //return new Course() { Id = id,Name="Dummy" };//
         }
         public List<Course> Get()
         {
-            return null;
+            return db.Courses.ToList();
         }
         public void Update(Course s)
         {
+            var exobj = Get(s.Id);
+            db.Entry(exobj).CurrentValues.SetValues(s);
+            db.SaveChanges();
         }
         public void Delete(int id)
         {
+            var exobj = Get(id);
+            db.Courses.Remove(exobj);
+            db.SaveChanges();
         }
     }
 }

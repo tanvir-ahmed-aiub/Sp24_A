@@ -11,6 +11,12 @@ namespace WebAPIAppLayer.Controllers
 {
     public class CourseController : ApiController
     {
+        [HttpGet]
+        [Route("api/course/{id}")]
+        public HttpResponseMessage Get(int id) {
+            var data = CourseService.Get(id);
+            return Request.CreateResponse(HttpStatusCode.OK, data); 
+        }
         [HttpPost]
         [Route("api/course/create")]
         public HttpResponseMessage Create(CourseDTO c) { 
