@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BLL.DTOs;
+using DAL;
 using DAL.EF.Entities;
 using DAL.Repos;
 using System;
@@ -13,7 +14,7 @@ namespace BLL.Services
     public class CourseService
     {
         public static CourseDTO Get(int id) { 
-            var data = new CourseRepo().Get(id);
+            var data = DataFactory.CourseData().Get(id);
             var config = new MapperConfiguration(cfg => { 
                 cfg.CreateMap<Course,CourseDTO>();
             });
@@ -28,10 +29,10 @@ namespace BLL.Services
             });
             var mapper = new Mapper(config);
             var crs = mapper.Map<Course>(c);
-            new CourseRepo().Create(crs);
+            DataFactory.CourseData().Create(crs);
         }
         public static List<CourseDTO> Get() { 
-            var data = new CourseRepo().Get(); //List<Course> ef model
+            var data = DataFactory.CourseData().Get(); //List<Course> ef model
 
             //mapper
             var config = new MapperConfiguration(cfg => {

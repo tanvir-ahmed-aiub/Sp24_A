@@ -46,8 +46,11 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DTOs\CourseDTO.cs" />
+    <Compile Include="DTOs\DepartmentCourseDTO.cs" />
+    <Compile Include="DTOs\DepartmentDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CourseService.cs" />
+    <Compile Include="Services\DepartmentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

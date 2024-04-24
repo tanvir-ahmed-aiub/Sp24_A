@@ -26,3 +26,4 @@ C:\Users\Tanvir Ahmed\Desktop\Test\WebAPIAppLayer\DAL\obj\Debug\DAL.csproj.CoreC
 C:\Users\Tanvir Ahmed\Desktop\Test\WebAPIAppLayer\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Tanvir Ahmed\Desktop\Test\WebAPIAppLayer\DAL\obj\Debug\DAL.dll
 C:\Users\Tanvir Ahmed\Desktop\Test\WebAPIAppLayer\DAL\obj\Debug\DAL.pdb
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\WebAPIAppLayer\DAL\obj\Debug\DAL.Migrations.DeptAddedandPKFKDeptCourse.resources

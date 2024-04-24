@@ -51,15 +51,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataFactory.cs" />
     <Compile Include="EF\Entities\Course.cs" />
+    <Compile Include="EF\Entities\Department.cs" />
     <Compile Include="EF\Entities\Student.cs" />
     <Compile Include="EF\UMSContext.cs" />
+    <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202404170609201_InitDB.cs" />
     <Compile Include="Migrations\202404170609201_InitDB.designer.cs">
       <DependentUpon>202404170609201_InitDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404240530301_DeptAddedandPKFKDeptCourse.cs" />
+    <Compile Include="Migrations\202404240530301_DeptAddedandPKFKDeptCourse.designer.cs">
+      <DependentUpon>202404240530301_DeptAddedandPKFKDeptCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repos\CourseRepo.cs" />
+    <Compile Include="Repos\CourseRepoV2.cs" />
+    <Compile Include="Repos\DepartmentRepo.cs" />
+    <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\StudentRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,6 +80,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202404170609201_InitDB.resx">
       <DependentUpon>202404170609201_InitDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404240530301_DeptAddedandPKFKDeptCourse.resx">
+      <DependentUpon>202404240530301_DeptAddedandPKFKDeptCourse.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

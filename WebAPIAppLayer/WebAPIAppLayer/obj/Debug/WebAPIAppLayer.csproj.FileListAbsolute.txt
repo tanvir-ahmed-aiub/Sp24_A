@@ -152,3 +152,5 @@ C:\Users\Tanvir Ahmed\Desktop\Test\WebAPIAppLayer\WebAPIAppLayer\obj\Debug\WebAP
 C:\Users\Tanvir Ahmed\Desktop\Test\WebAPIAppLayer\WebAPIAppLayer\obj\Debug\WebAPIAppLayer.pdb
 C:\Users\Tanvir Ahmed\Desktop\Test\WebAPIAppLayer\WebAPIAppLayer\bin\EntityFramework.SqlServer.dll
 C:\Users\Tanvir Ahmed\Desktop\Test\WebAPIAppLayer\WebAPIAppLayer\bin\EntityFramework.SqlServer.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\WebAPIAppLayer\WebAPIAppLayer\bin\EntityFramework.SqlServer.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\WebAPIAppLayer\WebAPIAppLayer\bin\EntityFramework.SqlServer.xml
